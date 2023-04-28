@@ -6,12 +6,12 @@ on:
   pull_request:
     branches-ignore:
       - 'integration/**/*' # skip this CI workflow for any PR targeting an integration branch
-    paths-ignore:
-      - '.buildkite/**'
-      - '*.md'
-      - 'LICENSE'
-      - 'CODEOWNERS'
-      - 'renovate.json'
+    # paths-ignore:
+    #   - '.buildkite/**'
+    #   - '*.md'
+    #   - 'LICENSE'
+    #   - 'CODEOWNERS'
+    #   - 'renovate.json'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
